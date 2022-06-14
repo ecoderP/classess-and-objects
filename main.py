@@ -1,22 +1,25 @@
 class Student:
     # [assignment] Skeleton class. Add your code here
     def __init__(self, name, age, tracks, score):
-        pass
+        self.name = name
+        self.age = age
+        self.tracks = tracks
+        self.score = score
 
-    def __change_name__(self):
-        print("My name is " + Bob.change_name)
-    def __change_age__(self):
-        print("my age is " + Bob.change_age)
-    def __add_track__(self):
-        print("my tracks are " + Bob.tracks)
-    def __get_score__(self):
-        print("My scores are " + Bob.score)
+    def change_name(self, name):
+        self.name = name
+    def change_age(self, age):
+        self.age = age
+    def add_track(self, tracks):
+        self.tracks = tracks
+    def get_score(self):
+        return self.score
 
-Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
+Bob = Student(name="Bob", age=26, tracks=["FE","BE"], score=20.90)
 
 # Expected methods
 Bob.change_name("Peter")
 Bob.change_age(34)
 Bob.add_track("UI/UX")
-Bob.get_score()
-
+Bob.get_score(17.00)
+print(Bob.change_name)
